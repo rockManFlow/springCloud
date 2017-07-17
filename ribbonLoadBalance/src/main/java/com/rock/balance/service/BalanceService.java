@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 /**
+ * 断路由的实现主要使用的是Hystrix的回退机制
  * Created by caoqingyuan on 2017/7/16.
  */
 @Service

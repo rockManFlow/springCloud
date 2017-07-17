@@ -1,19 +1,19 @@
-package com.rock.service;
+package com.rock.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * 创建提供服务的客户端
  * Created by caoqingyuan on 2017/7/11.
  */
-//配置注册服务器客户端
-@EnableDiscoveryClient
 //会扫描根目录下的所有注解
 @SpringBootApplication
-public class ServiceApplication {
+//开启配置服务
+@EnableConfigServer
+public class ConfigApplication {
     public static void main(String[] args){
-        SpringApplication.run(ServiceApplication.class,args);
+        SpringApplication.run(ConfigApplication.class,args);
     }
 }
